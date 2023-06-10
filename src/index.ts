@@ -4,6 +4,7 @@ import {
 } from '@jupyterlab/application';
 
 import { ICommandPalette, MainAreaWidget } from '@jupyterlab/apputils';
+import { ILauncher } from '@jupyterlab/launcher';
 
 import { Widget } from '@lumino/widgets';
 
@@ -12,10 +13,10 @@ import { Widget } from '@lumino/widgets';
  */
 const plugin: JupyterFrontEndPlugin<void> = {
   id: 'runplify',
-  description: 'A Juupyter lab extension to save execution output',
+  description: 'An Jupyter lab extension to save execution output',
   autoStart: true,
   requires: [ICommandPalette],
-  activate: (app: JupyterFrontEnd, palette: ICommandPalette) => {
+  activate: (app: JupyterFrontEnd, palette: ICommandPalette, launcher: ILauncher) => {
     console.log('JupyterLab extension Runplify is activated!');
 
     // Define a widget creator function,

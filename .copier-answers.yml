@@ -7,7 +7,7 @@ has_binder: true
 has_settings: false
 kind: frontend
 labextension_name: runplify
-project_short_description: A Juupyter lab extension to save execution output
+project_short_description: A Jupyter lab extension to save execution output
 python_name: runplify
 repository: ''
 test: true
