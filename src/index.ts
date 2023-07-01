@@ -33,10 +33,11 @@ export class ButtonExtension
     context: DocumentRegistry.IContext<INotebookModel>,
   ): IDisposable {
     const click = async () => {
+      alert("Runplify is running!")
       const data = { path: context.path}
       let settings = ServerConnection.makeSettings({});
       let serverResponse = await ServerConnection.makeRequest(
-        URLExt.join(settings.baseUrl, '/mybutton/hello'), { method: 'POST', body: JSON.stringify(data)}, settings);
+        URLExt.join(settings.baseUrl, '/runplify'), { method: 'POST', body: JSON.stringify(data)}, settings);
       console.log(serverResponse);
     };
     const button = new ToolbarButton({

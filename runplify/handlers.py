@@ -11,7 +11,7 @@ from email.mime.base import MIMEBase
 from email.mime.text import MIMEText
 from email import encoders
 
-class TutorialHandler(JupyterHandler):
+class RunplifyHandler(JupyterHandler):
     @tornado.web.authenticated
     def post(self):
         request = self.get_json_body()

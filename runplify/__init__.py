@@ -1,12 +1,5 @@
 from ._version import __version__
-from .handlers import TutorialHandler
-
-
-""" def _jupyter_labextension_paths():
-    return [{
-        "src": "labextension",
-        "dest": "runplify"
-    }] """
+from .handlers import RunplifyHandler
 
 def _jupyter_server_extension_points():
     return [{
@@ -14,5 +7,5 @@ def _jupyter_server_extension_points():
     }]
 
 def load_jupyter_server_extension(server_app):
-    handlers = [("/mybutton/hello", TutorialHandler)]
+    handlers = [("/runplify", RunplifyHandler)]
     server_app.web_app.add_handlers(".*$", handlers)
